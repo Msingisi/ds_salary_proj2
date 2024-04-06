@@ -5,11 +5,11 @@
 * Optimized Linear Regression, Decision Tree, Lasso Regression, Gradient Boosting, XGBoost, and Random Forest Regressors using GridsearchCV to reach the best model.
 
 ## Code and Resources Used
-* Python version:** 3.12
-* Packages:** pandas, numpy, sklearn, matplotlib, seaborn, selenium
-*  Scraper Github:** https://github.com/arapfaik/scraping-glassdoor-selenium
-* Scraper Article:** https://mersakarya.medium.com/selenium-tutorial-scraping-glassdoor-com-in-10-minutes-3d0915c6d905
-* YouTube Project Walk-Through:** https://www.youtube.com/playlist?list=PL2zq7klxX5ASFejJj80ob9ZAnBHdz5O1t
+* Python version: 3.12
+* Packages: pandas, numpy, sklearn, matplotlib, seaborn, selenium
+*  Scraper Github: https://github.com/arapfaik/scraping-glassdoor-selenium
+* Scraper Article: https://mersakarya.medium.com/selenium-tutorial-scraping-glassdoor-com-in-10-minutes-3d0915c6d905
+* YouTube Project Walk-Through: https://www.youtube.com/playlist?list=PL2zq7klxX5ASFejJj80ob9ZAnBHdz5O1t
 
 ## Web Scraping
 Tweaked the web scraper github repo (above) to scrape 1000 job postings from glassdoor.com. With each job, we got the following:
@@ -56,3 +56,19 @@ After scraping the data, I needed to clean it up so that it was usable for our m
 Column for simplified job title and Seniority
 Column for description length
 Column for remote jobs
+
+## EDA
+## Model Building
+First, I transformed the categorical variables into dummy variables. I also split the data into train and tests sets with a test size of 20%.
+
+I tried six different models and evaluated them using Mean Absolute Error. I chose MAE because it is relatively easy to interpret and outliers aren’t particularly bad in for this type of model.
+
+I tried three different models:
+*     ** Multiple Linear Regression** – Baseline for the model
+Lasso Regression – Because of the sparse data from the many categorical variables, I thought a normalized regression like lasso would be effective.
+Random Forest – Again, with the sparsity associated with the data, I thought that this would be a good fit.
+
+Model performance
+The Random Forest model far outperformed the other approaches on the test and validation sets.
+
+Random Forest : MAE = 4.5 Linear Regression: MAE = 18.86 Ridge Regression: MAE = 19.67
