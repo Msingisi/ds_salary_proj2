@@ -63,12 +63,15 @@ First, I transformed the categorical variables into dummy variables. I also spli
 
 I tried six different models and evaluated them using Mean Absolute Error. I chose MAE because it is relatively easy to interpret and outliers aren’t particularly bad in for this type of model.
 
-I tried three different models:
-*     ** Multiple Linear Regression** – Baseline for the model
-Lasso Regression – Because of the sparse data from the many categorical variables, I thought a normalized regression like lasso would be effective.
-Random Forest – Again, with the sparsity associated with the data, I thought that this would be a good fit.
+I tried six different models:
+*  Multiple Linear Regression – Baseline for the model
+*  Lasso Regression – Because of the sparse data from the many categorical variables, I thought a normalized regression like lasso would be effective.
+*  Random Forest – Again, with the sparsity associated with the data, I thought that this would be a good fit.
+*  Decision Trees - Provide a clear and intuitive representation of decision-making
+*  Gradient Boosting - Is robust to outliers and missing data, making it suitable for real-world datasets
+*  XGBoost - Because of consistently delivers accurate predictions
 
-Model performance
+## Model performance
 The Random Forest model far outperformed the other approaches on the test and validation sets.
 
 Random Forest : MAE = 4.5 Linear Regression: MAE = 18.86 Ridge Regression: MAE = 19.67
