@@ -72,6 +72,11 @@ I tried six different models:
 *  XGBoost - Because of consistently delivers accurate predictions
 
 ## Model performance
-The Random Forest model far outperformed the other approaches on the test and validation sets.
+Based on the test set performance, the Lasso Regression model achieved the lowest MAE (22.69), making it the best-performing model among the ones tested
+* Lasso Regression: MAE = 22.69
+* Random Forest : MAE = 23.10
+* XGBoost: MAE = 23.58
+* Decision Tree : MAE = 24.23
+* Gradient Boosting: MAE = 24.37
+* Linear Regression: MAE = 31.53
 
-Random Forest : MAE = 4.5 Linear Regression: MAE = 18.86 Ridge Regression: MAE = 19.67
