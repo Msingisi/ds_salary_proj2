@@ -58,6 +58,11 @@ Column for description length
 Column for remote jobs
 
 ## EDA
+I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables.
+![alt text](https://github.com/Msingisi/ds_salary_proj2/blob/main/images/job_simp.jpeg)
+![alt text](https://github.com/Msingisi/ds_salary_proj2/blob/main/images/job%20state.png)
+![alt text](https://github.com/Msingisi/ds_salary_proj2/blob/main/images/corr%20plot.png)
+![alt text](https://github.com/Msingisi/ds_salary_proj2/blob/main/images/word%20cloud.png)
 ## Model Building
 First, I transformed the categorical variables into dummy variables. I also split the data into train and tests sets with a test size of 20%.
 
