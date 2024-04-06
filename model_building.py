@@ -173,12 +173,12 @@ stacking_mae = mean_absolute_error(y_test, stacking_pred)
 print(f"Stacking MAE on test set: {stacking_mae}")
 
 
-# Averaging
+# Averaging two models (Lasso Regressor, Random Forest)
 
 lasso_model = Lasso(alpha=0.26)
 rf_model = RandomForestRegressor(max_depth=15, min_samples_split=2, n_estimators=200)
 
-# Train all models on the training dataset
+# Train all models
 lasso_model.fit(X_train, y_train)
 rf_model.fit(X_train, y_train)
 
